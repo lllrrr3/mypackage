@@ -12,9 +12,9 @@ function index()
 	entry({"admin", "docker"},
 		firstchild(),
 		_("Docker"),
-		40).acl_depends = { "luci-app-dockerman" }
+		44).acl_depends = { "luci-app-dockerman" }
 
-	entry({"admin", "docker", "config"},cbi("dockerman/configuration"),_("Configuration"), 44).leaf=true
+	entry({"admin", "docker", "config"},cbi("dockerman/configuration"),_("Configuration"), 42).leaf=true
 	
 	-- local uci = (require "luci.model.uci").cursor()
 	-- if uci:get_bool("dockerd", "dockerman", "remote_endpoint") then
