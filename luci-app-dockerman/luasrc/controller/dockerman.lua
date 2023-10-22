@@ -12,7 +12,7 @@ function index()
 	entry({"admin", "docker"},
 		firstchild(),
 		_("Docker"),
-		44).acl_depends = { "luci-app-dockerman" }
+		45).acl_depends = { "luci-app-dockerman" }
 
 	entry({"admin", "docker", "config"},cbi("dockerman/configuration"),_("Configuration"), 8).leaf=true
 	
