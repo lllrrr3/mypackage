@@ -19,10 +19,6 @@ echo "DISTRIB_REVISION='R8.3.19.0410'" >> /etc/openwrt_release
 sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release
 echo "DISTRIB_DESCRIPTION='Router'" >> /etc/openwrt_release
 
-sed -i '/Powered by/d' /usr/lib/lua/luci/view/themes/*/footer.htm
-sed -i '/ver.luciversion/d' /usr/lib/lua/luci/view/themes/argon/footer.htm
-sed -i '/ArgonTheme/d' /usr/lib/lua/luci/view/themes/*/footer.htm
-
 sed -i '/<%=pcdata(ver.distname)%> <%=pcdata(ver.distversion)%>/d' /usr/lib/lua/luci/view/admin_status/index.htm
 sed -i 's/<%=pcdata(ver.luciname)%> (<%=pcdata(ver.luciversion)%>)/<%=pcdata(ver.distname)%> <%=pcdata(ver.distversion)%>/g' /usr/lib/lua/luci/view/admin_status/index.htm
 
