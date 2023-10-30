@@ -21,7 +21,7 @@ config DOCKER_CGROUP_OPTIONS
 
 config DOCKER_OPTIONAL_FEATURES
 	bool "Enable optional kernel support for Docker"
-	default y
+	default n
 	depends on PACKAGE_dockerd
 	select KERNEL_MEMCG_SWAP_ENABLED
 	select KERNEL_CFQ_GROUP_IOSCHED
